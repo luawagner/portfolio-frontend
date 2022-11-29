@@ -24,4 +24,16 @@ isLogged= false;
 cargarProject(): void{
   this.sProject.lista().subscribe(data =>{this.project = data})
 }
+
+delete(id?:number){
+  if(id != undefined){
+    this.sProject.delete(id).subscribe(
+      data => {
+        this.cargarProject();
+      }, err => {
+        alert("No se pudo cargar el proyecto");
+      }
+    )
+  }
+}
 }
