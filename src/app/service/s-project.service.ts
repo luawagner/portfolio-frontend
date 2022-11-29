@@ -7,7 +7,7 @@ import { Project } from '../model/project';
   providedIn: 'root'
 })
 export class SProjectService {
-proURL = 'http://localhost:8080/projects'
+proURL = 'http://localhost:8080/projects/'
 
   constructor(private httpClient: HttpClient) { }
 public lista(): Observable<Project[]>{

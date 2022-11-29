@@ -10,13 +10,13 @@ import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/about/skills/skills.component';
 import { EducationComponent } from './components/education/education.component';
 import { MyprojectsComponent } from './components/myprojects/myprojects.component';
-import { CardprojectComponent } from './components/myprojects/cardproject/cardproject.component';
 import { RedesComponent } from './components/redes/redes.component';
 import { SaludoComponent } from './components/saludo/saludo.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { interceptorProvider } from './service/interceptor.service';
 import { NewProjectComponent } from './components/myprojects/new-project/new-project.component';
+import { EditProjectComponent } from './components/myprojects/edit-project/edit-project.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +26,12 @@ import { NewProjectComponent } from './components/myprojects/new-project/new-pro
     SkillsComponent,
     EducationComponent,
     MyprojectsComponent,
-    CardprojectComponent,
     RedesComponent,
     SaludoComponent,
     HomeComponent,
     LoginComponent,
     NewProjectComponent,
+    EditProjectComponent,
 
   ],
   imports: [
