@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="formulario">
+      <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Nombre del proyecto</span>
+          <input name="nombreP" id="nombreP" type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"
+          [(ngModel)]="nombreP" required>
+        </div>
+        <div class="input-group mb-3">
+          <span class="input-group-text" id="basic-addon1">Nombre del proyecto</span>
+          <textarea class="form-control" name="descriptionP" id="descriptionP" cols="30" rows="10" [(ngModel)]="descriptionP" required></textarea>
+
+        </div>
+        <button class="btn btn-primary">Agregar proyecto</button>
+
+      </form>
+    </div>
+  </div>
+</div>

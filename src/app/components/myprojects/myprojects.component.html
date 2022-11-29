@@ -1,0 +1,44 @@
+<section class="projects m-auto mt-10 me-5">
+  <div id="work"></div>
+<h3 class="green text-center section-title">My work</h3>
+<button type="button"  class="btn btn-light" routerLink="/nuevoproyecto" *ngIf="isLogged"> Añadir proyecto </button>
+<div class="container row mt-5 d-flex justify-content-around m-auto" style="width: 80%">
+  <div class="card" style="width: 18rem;">
+      <app-cardproject></app-cardproject>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="../assets/img/cruce.png" class="card-img-top" alt="...">
+      <div class="card-body">
+          <div class="title-card row">
+              <h5 class="card-title col green d-flex">Card title</h5>
+              <div class="icons-card col-7 text-end">
+                <img src="../assets/img/png/node-js.png" alt="">
+                <img src="../assets/img/png/js.png" alt="">
+                <img src="../assets/" alt="">
+              </div>
+            </div>
+        <p class="card-text purple">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+       <div class="buttons row card-body">
+        <a href="#" class="btn btn-outline-secondary col-8">Ver proyecto</a> <i class="iconos bi bi-github col purple text-end"></i>
+      </div>
+  </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <img src="../assets/img/portfolio.png" class="card-img-top" alt="...">
+      <div class="card-body">
+          <div class="title-card row">
+              <h5 class="card-title col green d-flex">Card title</h5>
+              <div class="icons-card col-7 text-end">
+                <img src="../assets/img/png/node-js.png" alt="">
+                <img src="../assets/img/png/js.png" alt="">
+                <img src="../assets/" alt="">
+              </div>
+            </div>
+        <p class="card-text purple">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+       <div class="buttons row card-body">
+        <a href="#" class="btn btn-outline-secondary col-8">Ver proyecto</a><i class="iconos bi bi-github col purple text-end"></i>
+      </div>
+  </div>
+    </div>
+    </div>
+</section>

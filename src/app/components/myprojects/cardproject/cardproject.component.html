@@ -1,0 +1,24 @@
+<div *ngFor="let Project of project">
+  <img src="../assets/img/coffee.png" class="card-img-top" alt="...">
+  <div class="card-body">
+      <div class="title-card row">
+          <h5 class="card-title col green d-flex">{{Project.nombreP}}</h5>
+          <div class="icons-card col-7 text-end">
+            <img src="../assets/img/png/node-js.png" alt="">
+            <img src="../assets/img/png/js.png" alt="">
+            <img src="../assets/" alt="">
+          </div>
+        </div>
+    <p class="card-text purple">{{Project.descriptionP}}</p>
+   <div class="buttons row card-body">
+    <a href="#" class="btn btn-outline-secondary col-8">Ver proyecto</a> <i class="iconos bi bi-github col purple text-end"></i>
+  </div>
+  <div class="buttons-edit-delete row" >
+    <i class="bi bi-pen-fill"></i>
+    <i class="bi bi-trash3-fill"></i>
+  </div>
+</div>
+</div>
+
+
+
