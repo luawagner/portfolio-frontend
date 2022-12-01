@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { SkillsComponent } from './components/about/skills/skills.component';
-import { EducationComponent } from './components/education/education.component';
+import { EducacionComponent } from './components/education/educacion.component';
 import { MyprojectsComponent } from './components/myprojects/myprojects.component';
 import { RedesComponent } from './components/redes/redes.component';
 import { SaludoComponent } from './components/saludo/saludo.component';
@@ -17,6 +17,8 @@ import { LoginComponent } from './components/login/login.component';
 import { interceptorProvider } from './service/interceptor.service';
 import { NewProjectComponent } from './components/myprojects/new-project/new-project.component';
 import { EditProjectComponent } from './components/myprojects/edit-project/edit-project.component';
+import { NeweducacionComponent } from './components/education/new-educacion.component';
+import { EditeducacionComponent } from './components/education/edit-educacion.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { EditProjectComponent } from './components/myprojects/edit-project/edit-
     HeaderComponent,
     AboutComponent,
     SkillsComponent,
-    EducationComponent,
+    EducacionComponent,
     MyprojectsComponent,
     RedesComponent,
     SaludoComponent,
@@ -32,6 +34,8 @@ import { EditProjectComponent } from './components/myprojects/edit-project/edit-
     LoginComponent,
     NewProjectComponent,
     EditProjectComponent,
+    NeweducacionComponent,
+    EditeducacionComponent,
 
   ],
   imports: [
