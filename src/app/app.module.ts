@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
+import { NgCircleProgressModule } from 'ng-circle-progress';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from "@angular/common/http"
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
-import { SkillsComponent } from './components/about/skills/skills.component';
 import { EducacionComponent } from './components/education/educacion.component';
 import { MyprojectsComponent } from './components/myprojects/myprojects.component';
 import { RedesComponent } from './components/redes/redes.component';
@@ -19,13 +18,19 @@ import { NewProjectComponent } from './components/myprojects/new-project/new-pro
 import { EditProjectComponent } from './components/myprojects/edit-project/edit-project.component';
 import { NeweducacionComponent } from './components/education/new-educacion.component';
 import { EditeducacionComponent } from './components/education/edit-educacion.component';
+import { SkillComponent } from './components/skill/skill.component';
+import { NewSkillComponent } from './components/skill/new-skill.component';
+import { EditSkillComponent } from './components/skill/edit-skill.component';
+import { EditAboutComponent } from './components/about/edit-about.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AboutComponent,
-    SkillsComponent,
     EducacionComponent,
     MyprojectsComponent,
     RedesComponent,
@@ -36,13 +41,20 @@ import { EditeducacionComponent } from './components/education/edit-educacion.co
     EditProjectComponent,
     NeweducacionComponent,
     EditeducacionComponent,
+    SkillComponent,
+    NewSkillComponent,
+    EditSkillComponent,
+    EditAboutComponent,
 
   ],
   imports: [
+    NgCircleProgressModule.forRoot({}),
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     interceptorProvider
