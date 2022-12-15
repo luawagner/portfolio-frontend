@@ -5,7 +5,7 @@
 <div class="container row mt-5 d-flex justify-content-around m-auto" style="width: 80%">
   <div class="card" style="width: 18rem;">
     <div *ngFor="let Project of project">
-      <img src="../assets/img/coffee.png" class="card-img-top" alt="...">
+      <img src="{{Project.imgP}}" class="card-img-top" alt="...">
       <div class="card-body">
           <div class="title-card row">
               <h5 class="card-title col green d-flex">{{Project.nombreP}}</h5>

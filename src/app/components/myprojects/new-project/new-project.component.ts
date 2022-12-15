@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Project } from 'src/app/model/project';
+import { ImageService } from 'src/app/service/image.service';
 import { SProjectService } from 'src/app/service/s-project.service';
 
 @Component({
@@ -17,12 +18,17 @@ export class NewProjectComponent implements OnInit {
 
 
 
-  constructor(private sProject: SProjectService, private router: Router) { }
+  constructor(private sProject: SProjectService, private router: Router, private activatedRouter: ActivatedRoute,
+    public  imageService: ImageService) { }
 
   ngOnInit(): void {
+    this.imageService.clearUrl()
+
   }
 
 onCreate():void{
+
+  this.ImgP = this.imageService.url
   const project = new Project(this.nombreP, this.descriptionP, this.ImgP, this.githubP, this.urlP);
   this.sProject.save(project).subscribe(
     data =>{
@@ -33,6 +39,14 @@ onCreate():void{
       this.router.navigate(['']);
     }
   )
+
+}
+
+
+uploadImage($event: any){
+
+  const name = "project_" + Date.now() ;
+  this.imageService.uploadImage($event, name)
 }
 
 }

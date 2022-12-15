@@ -28,4 +28,12 @@ list(imagesRef)
   }
 }) .catch(error => {console.log(error)})
 }
+
+
+clearUrl() {
+  this.url = "";
+}
+
+
+
 }
