@@ -10,6 +10,12 @@
   list-style: none;
 
  }
+ .btn-outline-secondary:hover i{
+  color: white ;
+}
+i{
+  transition: ease 0.3s;
+}
 :root {
   --bs-blue: #131426;
   --bs-indigo: #6610f2;

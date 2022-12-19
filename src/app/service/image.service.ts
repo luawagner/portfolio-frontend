@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Storage, ref } from '@angular/fire/storage';
 import { getDownloadURL, list, uploadBytes } from '@firebase/storage';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,12 +23,18 @@ getImages(){
 const imagesRef = ref(this.storage, "imagen")
 list(imagesRef)
 .then(async response => {
-  for(let item of response.items){
+   for(let item of response.items){
+
     this.url = await getDownloadURL(item);
-    console.log("La url es" + this.url)
+
+    console.log(response.items)
   }
+
 }) .catch(error => {console.log(error)})
 }
+
+//prueba metodo
+
 
 
 clearUrl() {

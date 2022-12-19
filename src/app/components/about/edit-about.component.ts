@@ -43,7 +43,7 @@ persona: persona = null;
   }
   uploadImage($event: any){
     const id = this.activatedRouter.snapshot.params['id'];
-    const name = "perfil_" + id;
+    const name = "img_" + id + Date.now();
     this.imageService.uploadImage($event, name)
   }
 }

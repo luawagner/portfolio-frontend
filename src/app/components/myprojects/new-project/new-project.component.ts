@@ -45,7 +45,7 @@ onCreate():void{
 
 uploadImage($event: any){
 
-  const name = "project_" + Date.now() ;
+  const name = "img_" + Date.now() ;
   this.imageService.uploadImage($event, name)
 }
 
